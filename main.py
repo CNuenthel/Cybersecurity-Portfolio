@@ -30,7 +30,17 @@ bashcards = {
              "to add read perm for other and removes execute perm from user ",
     "drwxrwxrwx": "permissions readout showing target is a directory (d), user, group, and other have read/write/execute permissions",
     "sudo": "temporarily grants elevated privileges to specific users 'super user do'",
-    "useradd": "adds a user to the system"
+    "useradd": "adds a user to the system",
+    "userdel": "removes a user from the system",
+    "usermod": "modifies a users priveleges using -g and -G arguments to change group for user, or add user to "
+               "additional group in tandem with -a to append or will replace current additional groups",
+    "chown": "modifies ownership of a user or group. A ':' is required prior to group name",
+    "groupdel": "removes a group from system, users are typically also in their own group when added",
+    "man": "display information on commands and how they work i.e. [man chown] displays info on the chown command",
+    "apropos": "Sort commands by specific string and return sorted information i.e. [apropos -a graph editor] will "
+               "return commands that contain both graph and editor ",
+    "whatis": "displays command information in a single line"
+
 
 }
 
