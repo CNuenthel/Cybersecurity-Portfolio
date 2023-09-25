@@ -18,6 +18,19 @@ bashcards = {
     "cp": "copies a file with given name to given directory i.e. [cp python.txt home/analyst/programming] moves file "
           "named python.txt to programming directory, also renames file if second name is given instead of second "
           "path",
+    ">": "overwrites given filename with given text i.e. [echo 'this is a string' text.txt] overwrites file text.txt "
+         "with same file name and 'this is a string' as the recorded information ",
+    ">>": "adds given information to given filename i.e. [echo 'this is a string' text.txt] adds 'this is a string to end of text.txt file",
+    "nano": "opens a text file with the text editor nano i.e [nano text.txt] will open the text file 'text'",
+    "-a": "displays hidden files in current working directory, argument for 'ls'",
+    "-l": "displays file permissions in current working directory, argument for 'ls'",
+    "rwx": "represents permissions for a file or directory to read/write/execute, will be a '-' if any are lacking",
+    "permissions - types of owners": "user - u, group - g, other - o",
+    "chmod": "change permissions of given file/dir i.e. [chmod o+r,u-x text.txt] changes permissions on text.txt file "
+             "to add read perm for other and removes execute perm from user ",
+    "drwxrwxrwx": "permissions readout showing target is a directory (d), user, group, and other have read/write/execute permissions",
+    "sudo": "temporarily grants elevated privileges to specific users 'super user do'",
+    "useradd": "adds a user to the system"
 
 }
 
