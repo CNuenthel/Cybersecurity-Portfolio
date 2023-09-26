@@ -1,74 +1,52 @@
 import copy
 import random
 
+import flashcards
 
-bashcards = {
-    "cd": "changes the current working directory",
-    "ls": "lists the files and branches in current directory",
-    "grep": "returns directories or files matching a given description i.e. [grep Q1 home/users/quarterlyreports] "
-            "returns all file names with Q1 inside it",
-    "|": "called 'pipe', allows the standard output of the first command to push as standard input to following command",
-    "mkdir": "makes a new directory with given name i.e. [mkdir dir] makes a directory called dir",
-    "rmdir": "removes a directory with given name i.e. [rmdir dir] removes a directory called dir",
-    "touch": "creates a file with given name i.e. [touch python.txt] creates a text file named touch python",
-    "rm": "removes a file with given name i.e. [rm python.txt] would delete a file in current directory named "
-          "python.txt",
-    "mv": "moves a file with given name to given directory i.e. [mv python.txt home/analyst/programming] moves file "
-          "named python.txt to programming directory",
-    "cp": "copies a file with given name to given directory i.e. [cp python.txt home/analyst/programming] moves file "
-          "named python.txt to programming directory, also renames file if second name is given instead of second "
-          "path",
-    ">": "overwrites given filename with given text i.e. [echo 'this is a string' text.txt] overwrites file text.txt "
-         "with same file name and 'this is a string' as the recorded information ",
-    ">>": "adds given information to given filename i.e. [echo 'this is a string' text.txt] adds 'this is a string to end of text.txt file",
-    "nano": "opens a text file with the text editor nano i.e [nano text.txt] will open the text file 'text'",
-    "-a": "displays hidden files in current working directory, argument for 'ls'",
-    "-l": "displays file permissions in current working directory, argument for 'ls'",
-    "rwx": "represents permissions for a file or directory to read/write/execute, will be a '-' if any are lacking",
-    "permissions - types of owners": "user - u, group - g, other - o",
-    "chmod": "change permissions of given file/dir i.e. [chmod o+r,u-x text.txt] changes permissions on text.txt file "
-             "to add read perm for other and removes execute perm from user ",
-    "drwxrwxrwx": "permissions readout showing target is a directory (d), user, group, and other have read/write/execute permissions",
-    "sudo": "temporarily grants elevated privileges to specific users 'super user do'",
-    "useradd": "adds a user to the system",
-    "userdel": "removes a user from the system",
-    "usermod": "modifies a users priveleges using -g and -G arguments to change group for user, or add user to "
-               "additional group in tandem with -a to append or will replace current additional groups",
-    "chown": "modifies ownership of a user or group. A ':' is required prior to group name",
-    "groupdel": "removes a group from system, users are typically also in their own group when added",
-    "man": "display information on commands and how they work i.e. [man chown] displays info on the chown command",
-    "apropos": "Sort commands by specific string and return sorted information i.e. [apropos -a graph editor] will "
-               "return commands that contain both graph and editor ",
-    "whatis": "displays command information in a single line"
+# Welcome
+print("Welcome to Cody's text based flashcard system \n")
 
 
-}
+# Collect flashcard database input
+def request_decktype():
+    return input("Which deck of flashcards would you like to go through? \n"
+                 "Bash\n"
+                 "SQL\n"
+                 "\n"
+                 "Type quit to end\n")
 
 
-def bashcard_rotation():
-    bashcard_dict = copy.deepcopy(bashcards)
+while True:
+    while True:
+        result = request_decktype()
 
-    def get_card():
-        key, value = bashcard_dict.popitem()
-        return key, value
+        if result.title() == "Bash":
+            print("You chose Bash!\n")
+            deck = flashcards.FlashcardDeck(flashcards.bashcards)
+            break
 
-    flashcards = True
+        elif result.upper() == "SQL":
+            print("You chose SQL!\n")
+            deck = flashcards.FlashcardDeck(flashcards.sqlcards)
+            break
 
-    while flashcards:
-
-        if bashcard_dict:
-            card_word, card_answer = get_card()
-            response = input(f"{card_word} \n")
-
-            if response == "quit":
-                flashcards = False
-                print("Goodbye!")
-
-            print(card_answer)
+        elif result.title() == "Quit":
+            print("Bye!")
+            exit()
 
         else:
-            print("Thats all of them!")
-            flashcards = False
+            print("I'm sorry, I didn't quite understand that, please type a number to select.")
+            request_decktype()
 
+    print(f"There are {len(deck.card_dictionary)} cards in this deck!\n")
 
-bashcard_rotation()
+    while True:
+        card = deck.deal_card()
+
+        if card:
+            input(f"{card.face}")
+            input(f"{card.definition}\n")
+
+        else:
+            print("Thats all of the cards! Well done!")
+            break
