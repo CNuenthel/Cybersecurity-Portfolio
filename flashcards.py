@@ -90,7 +90,8 @@ bashcards = {
     "man": "display information on commands and how they work i.e. [man chown] displays info on the chown command",
     "apropos": "Sort commands by specific string and return sorted information i.e. [apropos -a graph editor] will "
                "return commands that contain both graph and editor ",
-    "whatis": "displays command information in a single line"
+    "whatis": "displays command information in a single line",
+    "cmp": "compares two file and returns the first instance of difference"
 
 
 }
