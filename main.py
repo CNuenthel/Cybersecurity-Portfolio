@@ -12,6 +12,7 @@ def request_decktype():
     return input("Which deck of flashcards would you like to go through? \n"
                  "Bash\n"
                  "SQL\n"
+                 "Resource\n"
                  "\n"
                  "Type quit to end\n")
 
@@ -22,12 +23,17 @@ while True:
 
         if result.title() == "Bash":
             print("You chose Bash!\n")
-            deck = flashcards.FlashcardDeck(flashcards.bashcards)
+            deck = flashcards.FlashcardDeck(flashcards.bashCards)
             break
 
         elif result.upper() == "SQL":
             print("You chose SQL!\n")
-            deck = flashcards.FlashcardDeck(flashcards.sqlcards)
+            deck = flashcards.FlashcardDeck(flashcards.sqlCards)
+            break
+
+        elif result.title() == "Resource":
+            print("You chose Resource!\n")
+            deck = flashcards.FlashcardDeck(flashcards.resourceCards)
             break
 
         elif result.title() == "Quit":

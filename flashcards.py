@@ -27,7 +27,7 @@ class FlashcardDeck:
         self.card_dictionary[card.face] = card.definition
 
 
-sqlcards = {
+sqlCards = {
     "inner join": "returns rows matching on a specified column that exists in more than one table.",
     "outer join": "Outer joins expand what is returned from a join. Each type of outer join returns all rows from "
                   "either one table or both tables",
@@ -53,7 +53,7 @@ sqlcards = {
 }
 
 
-bashcards = {
+bashCards = {
     "cd": "changes the current working directory",
     "ls": "lists the files and branches in current directory",
     "grep": "returns directories or files matching a given description i.e. [grep Q1 home/users/quarterlyreports] "
@@ -96,5 +96,8 @@ bashcards = {
 
 }
 
-
+resourceCards = {
+    "https://nvd.nist.gov/": "Database on common and up to date vulnerabilities",
+    
+}
 
