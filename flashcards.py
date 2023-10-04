@@ -109,3 +109,11 @@ resourceCards = {
     "https://apwg.org/": "anti phishing work group, publishes a quarterly report on phishing trends"
 }
 
+threatModel = {
+    "step1": "define the scope",
+    "step2": "identify threats",
+    "step3": "characterize environments",
+    "step4": "analyze threats",
+    "step5": "mitigate risks",
+    "step6": "evaluate findings"
+}
