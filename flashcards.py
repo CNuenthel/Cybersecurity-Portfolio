@@ -50,6 +50,10 @@ sqlCards = {
     "or": "specifies either given condition must be met",
     "%": "wildcard pattern with LIKE, indicates variable number of possible characters",
     "_": "wildcard pattern with LIKE, indicates a single additional variable character",
+    "sqlinjection categories": "in-band, out-of-band, inferential",
+    "in-band": "sql query code injected in an input that returns the result in the used input",
+    "out-of-band": "An out-of-band injection is one that uses a different communication channel  to launch the attack and gather the results",
+    "inferential": "sql query code injected to reveal application behavior and allow the observation of possible attack vectors"
 }
 
 
@@ -97,7 +101,11 @@ bashCards = {
 }
 
 resourceCards = {
-    "https://nvd.nist.gov/": "Database on common and up to date vulnerabilities",
-
+    "https://nvd.nist.gov/": "database on common and up to date vulnerabilities",
+    "https://www.sans.org/newsletters/ouch/": "reports on social engineering trends and other security topics from SANS institute",
+    "https://www.scamwatch.gov.au/": "resource for news and tools on identifying, avoiding, and reporting social engineering scams",
+    "https://phishingquiz.withgoogle.com/": "illustrates the difficulty of identifying phishing attacks",
+    "https://www.phishing.org/": "reports on the latest phishing trends",
+    "https://apwg.org/": "anti phishing work group, publishes a quarterly report on phishing trends"
 }
 
