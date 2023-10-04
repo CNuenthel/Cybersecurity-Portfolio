@@ -115,5 +115,6 @@ threatModel = {
     "step3": "characterize environments",
     "step4": "analyze threats",
     "step5": "mitigate risks",
-    "step6": "evaluate findings"
+    "step6": "evaluate findings",
+    "pasta model": "process for attack simulation and threat analysis"
 }
