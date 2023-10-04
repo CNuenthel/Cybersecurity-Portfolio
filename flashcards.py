@@ -98,6 +98,6 @@ bashCards = {
 
 resourceCards = {
     "https://nvd.nist.gov/": "Database on common and up to date vulnerabilities",
-    
+
 }
 
