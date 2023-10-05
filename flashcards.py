@@ -118,3 +118,17 @@ threatModel = {
     "step6": "evaluate findings",
     "pasta model": "process for attack simulation and threat analysis"
 }
+
+alertAndEventManagement = {
+    "intrusion detection system (IDS)": "detects malicious activity, logs activity, generates alerts, observes but does not interfere with attackers (zeek, suricata, snort, sagan)",
+    "intrusion prevention system (IPS)": "detects malicious activity, prevents intrusions, logs activity, generates alerts, can halt a system from operating to prevent intrusion",
+    "endpoint detection and response (EDR)": "monitor, record, and analyze endpoint system activity to identify, alert, and respond to suspicious activity",
+    "true positive": "an alert that correctly identifies an attack",
+    "true negative": "state where there is no detection of malicious activity, no alert is triggered",
+    "false positive": "an alert that incorrectly detects the presence of a threat",
+    "false negative": "state where the presence of malicious activity is not detected",
+    "siem": "security information and event management, a tool used to aggregate, normalize and analyze data",
+    "siem tool products": "AlienVault, Chronicle, Elastic, Exabeam, IBM QRadar, LogRhythm, Splunk",
+    "security orchestration, automation, and response": "a collection of tools, applications, and workflows used to automate and respond to security events"
+
+}

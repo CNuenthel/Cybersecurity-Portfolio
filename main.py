@@ -13,6 +13,8 @@ def request_decktype():
                  "Bash\n"
                  "SQL\n"
                  "Resource\n"
+                 "Threat Model\n"
+                 "Intrusion and Detection\n"
                  "\n"
                  "Type quit to end\n")
 
@@ -21,28 +23,35 @@ while True:
     while True:
         result = request_decktype()
 
-        if result.title() == "Bash":
-            print("You chose Bash!\n")
-            deck = flashcards.FlashcardDeck(flashcards.bashCards)
-            break
+        match result:
+            case "Bash":
+                print("You chose Bash!\n")
+                deck = flashcards.FlashcardDeck(flashcards.bashCards)
+                break
 
-        elif result.upper() == "SQL":
-            print("You chose SQL!\n")
-            deck = flashcards.FlashcardDeck(flashcards.sqlCards)
-            break
+            case "SQL":
+                print("You chose SQL!\n")
+                deck = flashcards.FlashcardDeck(flashcards.sqlCards)
+                break
 
-        elif result.title() == "Resource":
-            print("You chose Resource!\n")
-            deck = flashcards.FlashcardDeck(flashcards.resourceCards)
-            break
+            case "Resource":
+                print("You chose Resource!\n")
+                deck = flashcards.FlashcardDeck(flashcards.resourceCards)
+                break
 
-        elif result.title() == "Quit":
-            print("Bye!")
-            exit()
+            case "Threat Model":
+                print("You chose Threat Model!\n")
+                deck = flashcards.FlashcardDeck(flashcards.threatModel)
+                break
 
-        else:
-            print("I'm sorry, I didn't quite understand that, please type a number to select.")
-            request_decktype()
+            case "Alert and Event Management":
+                print("You chose Intrusion and Detection!\n")
+                deck = flashcards.FlashcardDeck(flashcards.alertAndEventManagement)
+                break
+
+            case "Quit":
+                print("Bye!")
+                exit()
 
     print(f"There are {len(deck.card_dictionary)} cards in this deck!\n")
 
