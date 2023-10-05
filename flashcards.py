@@ -129,6 +129,15 @@ alertAndEventManagement = {
     "false negative": "state where the presence of malicious activity is not detected",
     "siem": "security information and event management, a tool used to aggregate, normalize and analyze data",
     "siem tool products": "AlienVault, Chronicle, Elastic, Exabeam, IBM QRadar, LogRhythm, Splunk",
-    "security orchestration, automation, and response": "a collection of tools, applications, and workflows used to automate and respond to security events"
+    "security orchestration, automation, and response": "a collection of tools, applications, and workflows used to automate and respond to security events",
+    "indicators of compromise (IOC)": "observable evidence that suggests signs of a potential security incident",
+    "network protocol analyzers": "sometimes called packet sniffers, tools designed to capture and analyze data traffic within a network"
+}
 
+NIST = {
+    "identify": "identify assets to protect",
+    "protect": "implement tools to protect the attack surface of assets",
+    "detect": "detect malicious threats",
+    "respond": "remediate open attack vectors, and record damage",
+    "recover": "return systems to normal working order and establish policies to prevent future intrusion"
 }

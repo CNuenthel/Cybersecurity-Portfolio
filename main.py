@@ -15,6 +15,7 @@ def request_decktype():
                  "Resource\n"
                  "Threat Model\n"
                  "Intrusion and Detection\n"
+                 "NIST\n"
                  "\n"
                  "Type quit to end\n")
 
@@ -47,6 +48,11 @@ while True:
             case "Alert and Event Management":
                 print("You chose Intrusion and Detection!\n")
                 deck = flashcards.FlashcardDeck(flashcards.alertAndEventManagement)
+                break
+
+            case "NIST":
+                print("You chose NIST!\n")
+                deck = flashcards.FlashcardDeck(flashcards.NIST)
                 break
 
             case "Quit":
