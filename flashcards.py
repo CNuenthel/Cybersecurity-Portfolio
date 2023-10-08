@@ -106,7 +106,8 @@ resourceCards = {
     "https://www.scamwatch.gov.au/": "resource for news and tools on identifying, avoiding, and reporting social engineering scams",
     "https://phishingquiz.withgoogle.com/": "illustrates the difficulty of identifying phishing attacks",
     "https://www.phishing.org/": "reports on the latest phishing trends",
-    "https://apwg.org/": "anti phishing work group, publishes a quarterly report on phishing trends"
+    "https://apwg.org/": "anti phishing work group, publishes a quarterly report on phishing trends",
+    "https://www.virustotal.com/gui/home/upload": "service that allows anyone to analyze suspicous files, domains, URLs, and IPs for malicious content"
 }
 
 threatModel = {
@@ -130,8 +131,11 @@ alertAndEventManagement = {
     "siem": "security information and event management, a tool used to aggregate, normalize and analyze data",
     "siem tool products": "AlienVault, Chronicle, Elastic, Exabeam, IBM QRadar, LogRhythm, Splunk",
     "security orchestration, automation, and response": "a collection of tools, applications, and workflows used to automate and respond to security events",
-    "indicators of compromise (IOC)": "observable evidence that suggests signs of a potential security incident",
-    "network protocol analyzers": "sometimes called packet sniffers, tools designed to capture and analyze data traffic within a network"
+    "indicators of compromise (IOC)": "observable evidence that suggests signs of a potential security incident, such as an admin account being created after work hours or a usb stick in an unsupervised work station",
+    "network protocol analyzers": "sometimes called packet sniffers, tools designed to capture and analyze data traffic within a network",
+    "data packet": "basic unit of information that travels from one device to another within a network",
+    "network interface card (NIC)": "hardware that connects a computer to a network",
+    "packet capture formats": "Libpcap (Linux, MacOS), WinPcap (older format for windows), Npcap (Windows), PCAPng (capture packets and store data simultaneously)"
 }
 
 NIST = {
@@ -141,3 +145,44 @@ NIST = {
     "respond": "remediate open attack vectors, and record damage",
     "recover": "return systems to normal working order and establish policies to prevent future intrusion"
 }
+
+ipv4PacketFields = {
+    "version": "which version of ip is being used ipv4 in this instance",
+    "internet header length (IHL)": "length of header and options",
+    "type of service (TOS)": "provides information on packet priority for delivery",
+    "total length": "identifies the length of the entire packet including headers and data",
+    "identification, flags, fragment offset": "deal with information related to fragmentation, ip packet is broken into chunks, transferred and reassembeld",
+    "time to live (TTL)": "determines how long a packet can live before it gets dropped",
+    "protocol" : "specifies what protocol is being used, i.e. tcp = 6",
+    "header checksum": "stores a checksum value which is used to determine if there are any errors in the header",
+    "source ip address": "sender address of data packet",
+    "destination ip address": "receiver address of data packet",
+    "options": "not required, used for network troubleshooting"
+}
+
+ipv6PacketFields = {
+    "version": "which version of ip is being used, ipv6 in this instance",
+    "traffic class": "similar to type of service, provides information on packet priority for delivery",
+    "flow label": "identifies the packets of a flow; a sequence of packets sent from a specific address",
+    "payload length": "specifies length of data portion of the packet",
+    "next header": "the type of header that follows the ipv6 header, such as TCP",
+    "hop limit": "limits how long a packet can travel before being dropped",
+    "source address": "sender address of data packet",
+    "destination address": "receiver address of data packet"
+}
+
+wireshark = {
+    "filter for ip address": "ip.addr == {address}, ip.src == {address} (select ip source), ip.dst == {address} (select ip destination)",
+    "filter for mac address": "eth.addr == {address}",
+    "filter for ports": "udp.port == 53, tcp.port ==25",
+
+}
+
+logs = {
+    "syslogs": "log format that contains a header, structure data, and method",
+    "javascript object notation": "json, uses key value pairs to structure data",
+    "comma seperated values": "csv files, similar to cell structure of spreadsheets",
+    "extensible markup language": "xml, stores data in tagged format utilizing parent and child tags",
+    "common event format": "uses key-value pairs to structure data and identify fields and their corresponding values"
+}
+
