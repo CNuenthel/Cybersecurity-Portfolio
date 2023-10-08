@@ -143,7 +143,8 @@ NIST = {
     "protect": "implement tools to protect the attack surface of assets",
     "detect": "detect malicious threats",
     "respond": "remediate open attack vectors, and record damage",
-    "recover": "return systems to normal working order and establish policies to prevent future intrusion"
+    "recover": "return systems to normal working order and establish policies to prevent future intrusion",
+    "SP 800-30 Rev1": "Federal guide for risk assessments"
 }
 
 ipv4PacketFields = {

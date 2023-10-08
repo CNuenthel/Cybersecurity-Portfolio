@@ -16,6 +16,10 @@ def request_decktype():
                  "Threat Model\n"
                  "Intrusion and Detection\n"
                  "NIST\n"
+                 "ipv4PacketFields\n"
+                 "ipv6PacketFields\n"
+                 "wireshark\n"
+                 "logs\n"
                  "\n"
                  "Type quit to end\n")
 
@@ -53,6 +57,26 @@ while True:
             case "NIST":
                 print("You chose NIST!\n")
                 deck = flashcards.FlashcardDeck(flashcards.NIST)
+                break
+
+            case "ipv4PacketFields":
+                print("You chose ipv4 packet fields!\n")
+                deck = flashcards.FlashcardDeck(flashcards.ipv4PacketFields)
+                break
+
+            case "ipv6PacketFields":
+                print("You chose ipv6 packet fields!\n")
+                deck = flashcards.FlashcardDeck(flashcards.ipv6PacketFields)
+                break
+
+            case "wireshark":
+                print("You chose wireshark!\n")
+                deck = flashcards.FlashcardDeck(flashcards.wireshark)
+                break
+
+            case "logs":
+                print("You chose logs!\n")
+                deck = flashcards.FlashcardDeck(flashcards.logs)
                 break
 
             case "Quit":
