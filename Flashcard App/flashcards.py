@@ -187,3 +187,16 @@ logs = {
     "common event format": "uses key-value pairs to structure data and identify fields and their corresponding values"
 }
 
+osiModel = {
+    "a, 1": "application, directly interacts with data from the user, web browsers and email clients rely on this"
+            "layer to initiate communications",
+    "p, 2": "presentation, prepares information to be observable by applications and users, responsible for translation, "
+            "encryption, compression",
+    "s, 3": "session, responsible for opening and closing connections between devices, sets checkpoints - i.e. divison "
+            "of 100mb to 5mb checkpoints to be able to pick up on cut off connections",
+    "t, 4": "transport, responsible for end to end communication between two devices, segmentation, tcp, udp",
+    "n, 5": "network, facilitates data transfer between two different networks, conducts packets and routing",
+    "d, 6": "data link, facilitates data transfer between two different devices on the same network,"
+            "similar to network layer",
+    "p, 7": "physical, physical equipment involved in data transfer, cables, connections, switches"
+}

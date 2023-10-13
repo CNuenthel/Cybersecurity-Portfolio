@@ -20,6 +20,7 @@ def request_decktype():
                  "ipv6PacketFields\n"
                  "wireshark\n"
                  "logs\n"
+                 "osiModel\n"
                  "\n"
                  "Type quit to end\n")
 
@@ -77,6 +78,11 @@ while True:
             case "logs":
                 print("You chose logs!\n")
                 deck = flashcards.FlashcardDeck(flashcards.logs)
+                break
+
+            case "osiModel":
+                print("You chose osiModel!\n")
+                deck = flashcards.FlashcardDeck(flashcards.osiModel)
                 break
 
             case "Quit":
