@@ -44,6 +44,7 @@ def send_verification_code(receiving_email: str) -> TOTP:
     # Create message body for 2fa
     message = f"Hello! Your one time passcode is: {passcode}"
 
+    # Create email message object to appropriately parse email information to proper fields
     em = EmailMessage()
     em['From'] = email_sender
     em['To'] = email_receiver
